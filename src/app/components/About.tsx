@@ -8,15 +8,14 @@ export default function About() {
     <section className="relative min-h-screen">
       {/* Background Image */}
       <div className="absolute w-full h-[122%] left-0 -top-20 right-0 bottom-0">
-  <Image
-    src="/AboutBG.png"
-    alt="Background pattern"
-    fill
-    className="text-transparent"
-    priority
-  />
-</div>
-
+            <Image
+                src="/AboutBG.png"
+                alt="Background pattern"
+                fill
+                className="text-transparent"
+                priority
+            />
+            </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mt-16 mb-16">

@@ -7,6 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import emailjs from '@emailjs/browser'
 import { Facebook, Twitter, Instagram, Phone, Mail, MapPin } from 'lucide-react'
+import Link from 'next/link'
 import Map from '@/components/map'
 
 const formSchema = z.object({
@@ -64,6 +65,15 @@ export default function ContactPage() {
         transition={{ duration: 0.5 }}
         className="max-w-7xl mx-auto"
       >
+                  <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-sm uppercase tracking-wider text-gray-300 text-center"
+            style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'rgb(209, 213, 219)' }}
+          >
+            Do
+          </motion.p>
         <h1 className="text-4xl font-bold text-center text-[#0A0A3F] mb-12">Contact Us</h1>
 
         <div className="grid md:grid-cols-12 gap-8">
@@ -71,26 +81,21 @@ export default function ContactPage() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            // className="md:col-span-7 bg-white/95 rounded-[30px] rounded-br-3xl shadow-lg p-8 md:pr-[40rem]"
-            // style={{
-            //   width: '1214px',
-            //   height: '847px',
-            //   top: '5946px',
-            //   left: '77px',
-            //   gap: '0px',
-            //   zIndex: 1,
-            //   opacity: 0,
-            // }}
             className="md:col-span-7 bg-white/95 rounded-[30px] rounded-br-3xl shadow-lg p-8"
             style={{
-              width: '100%', // Default width for mobile
-              maxWidth: '100%', // Constrain it for smaller screens
-              height: '100%', // Keep height consistent
+              width: '100%', 
+              maxWidth: '100%', 
+              height: '100%', 
               top: '5946px',
               left: '77px',
               gap: '0px',
-              zIndex: 1, // Ensures proper stacking
+              zIndex: 1,
               opacity: 0,
+              backgroundImage: 'url("/ContactLogo.png")', 
+              backgroundSize: '561px 638px', 
+            //   backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
             }}
           >
             <h2 className="text-2xl font-semibold text-[#0A0A3F] mb-2">Send us a message</h2>
@@ -107,7 +112,7 @@ export default function ContactPage() {
                 <input
                   {...register('fullName')}
                   type="text"
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-[41px] border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   placeholder="Enter your full name"
                 />
                 {errors.fullName && (
@@ -122,7 +127,7 @@ export default function ContactPage() {
                 <input
                   {...register('email')}
                   type="email"
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-[41px] border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   placeholder="Enter your email"
                 />
                 {errors.email && (
@@ -135,13 +140,13 @@ export default function ContactPage() {
                   Contact Number
                 </label>
                 <div className="mt-1 flex rounded-md shadow-sm">
-                  <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-gray-500 sm:text-sm">
+                  <span className="inline-flex items-center rounded-l-[41px] border border-r-0 border-gray-300 bg-gray-50 px-3 text-gray-500 sm:text-sm">
                     +91
                   </span>
                   <input
                     {...register('contactNumber')}
                     type="tel"
-                    className="block w-full rounded-r-md border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="block w-full rounded-r-[41px] border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     placeholder="Enter your Contact number"
                   />
                 </div>
@@ -157,7 +162,7 @@ export default function ContactPage() {
                 <textarea
                   {...register('message')}
                   rows={4}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-[41px] border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   placeholder="Enter your message"
                 />
                 {errors.message && (
@@ -185,7 +190,7 @@ export default function ContactPage() {
             </form>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
@@ -247,7 +252,92 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+            className="md:col-span-5 bg-[#0A0A3F] text-white rounded-3xl shadow-lg p-8"
+            style={{
+                width: '100%',
+                height: '100%',
+                gap: '0px',
+                opacity: 0,
+                zIndex: 2,
+            }}
+          >
+           {/* <div className="bg-[#0A0A3F] rounded-3xl p-6 max-w-sm w-full"> */}
+      <h2 className="text-white text-xl font-semibold mb-6">
+        Hi! We are always here to help you.
+      </h2>
+
+      {/* Call Section */}
+      <div className="bg-[#1a1a5f] rounded-xl p-4 mb-4">
+        <div className="flex items-start space-x-3">
+          <Phone className="w-5 h-5 text-white mt-1" />
+          <div>
+            <p className="text-white font-medium mb-2">Call :</p>
+            <div className="space-y-1">
+              <p className="text-gray-300">+91 940 034 8299</p>
+              <p className="text-gray-300">+91 812 973 9897</p>
+              <p className="text-gray-300">+91 858 902 6004</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Email Section */}
+      <div className="bg-[#1a1a5f] rounded-xl p-4 mb-4">
+        <div className="flex items-start space-x-3">
+          <Mail className="w-5 h-5 text-white mt-1" />
+          <div>
+            <p className="text-white font-medium mb-2">Email :</p>
+            <p className="text-gray-300">dhariyamarine@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Location Section */}
+      <div className="bg-[#1a1a5f] rounded-xl p-4 mb-6">
+        <div className="flex items-start space-x-3">
+          <MapPin className="w-5 h-5 text-white mt-1" />
+          <div>
+            <p className="text-white font-medium mb-2">Location :</p>
+            <div className="space-y-1">
+              <p className="text-gray-300">15/1945</p>
+              <p className="text-gray-300">Near Aquinas College ,</p>
+              <p className="text-gray-300">Edakochi,Kerala - 682010</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Social Media Links */}
+      <div className="flex items-center justify-center space-x-6">
+        <Link 
+          href="#" 
+          className="text-white hover:text-gray-300 transition-colors"
+          aria-label="Facebook"
+        >
+          <Facebook className="w-5 h-5" />
+        </Link>
+        <Link 
+          href="#" 
+          className="text-white hover:text-gray-300 transition-colors"
+          aria-label="Twitter"
+        >
+          <Twitter className="w-5 h-5" />
+        </Link>
+        <Link 
+          href="#" 
+          className="text-white hover:text-gray-300 transition-colors"
+          aria-label="Instagram"
+        >
+          <Instagram className="w-5 h-5" />
+        </Link>
+      </div>
+    {/* </div> */}
+    </motion.div>
         </div>
 
         <motion.div

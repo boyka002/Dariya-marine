@@ -23,10 +23,21 @@ html {
 .hero-gradient {
   background: linear-gradient(90deg, #ffffff 60%, transparent 100%);
 }
+.about-bg-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
 
 @media (max-width: 768px) {
   .hero-gradient {
     background: linear-gradient(180deg, #ffffff 60%, transparent 100%);
+  }
+
+  .about-bg-image {
+    transform: scale(1.1);
   }
 }
 
