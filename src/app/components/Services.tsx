@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ExploreButton } from '@/components/ui/explore-button'
 import { ServiceDetailsDialog } from '@/components/service-details-dialog'
 
 const buildingServices = [
@@ -128,7 +127,7 @@ export default function Services() {
 
           {/* Repair Services */}
           {/* <div className="grid md:grid-cols-2 gap-8 items-center"> */}
-          <div className="grid md:grid-cols-2 gap-8 items-center flex flex-col-reverse md:flex-row">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
 
             <motion.div
               initial={{ opacity: 0, x: -20 }}
