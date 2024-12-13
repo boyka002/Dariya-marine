@@ -9,7 +9,6 @@ import emailjs from '@emailjs/browser'
 import { Facebook, Twitter, Instagram, Phone, Mail, MapPin } from 'lucide-react'
 import Link from 'next/link'
 import Map from '@/components/map'
-import { ExploreButton } from '@/components/ui/explore-button'
 import { cn } from '@/lib/utils'
 
 const formSchema = z.object({
