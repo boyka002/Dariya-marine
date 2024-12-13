@@ -54,7 +54,7 @@ export function Footer() {
                 alt="Dhariya Marine Engineering Services"
                 width={362}
                 height={157}
-                className="w-[362px] h-[157px] brightness-0 invert"
+                className="w-[200px] h-[87px] md:w-[362px] md:h-[157px] brightness-0 invert"
             />
             </div>
 

@@ -9,6 +9,8 @@ import emailjs from '@emailjs/browser'
 import { Facebook, Twitter, Instagram, Phone, Mail, MapPin } from 'lucide-react'
 import Link from 'next/link'
 import Map from '@/components/map'
+import { ExploreButton } from '@/components/ui/explore-button'
+import { cn } from '@/lib/utils'
 
 const formSchema = z.object({
   fullName: z.string().min(2, 'Full name must be at least 2 characters'),
@@ -36,15 +38,15 @@ export default function ContactPage() {
     setIsSubmitting(true)
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_ewhdhnl',
+        'template_bwecr49',
         {
           from_name: data.fullName,
           from_email: data.email,
           contact_number: data.contactNumber,
           message: data.message,
         },
-        'YOUR_PUBLIC_KEY'
+        'FEZ1hbiURYBN5OiFx'
       )
       setSubmitStatus('success')
       reset()
@@ -112,7 +114,7 @@ export default function ContactPage() {
                 <input
                   {...register('fullName')}
                   type="text"
-                  className="mt-1 block w-full rounded-[41px] border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-[10px] border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   placeholder="Enter your full name"
                 />
                 {errors.fullName && (
@@ -127,7 +129,7 @@ export default function ContactPage() {
                 <input
                   {...register('email')}
                   type="email"
-                  className="mt-1 block w-full rounded-[41px] border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-[10px] border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   placeholder="Enter your email"
                 />
                 {errors.email && (
@@ -140,13 +142,13 @@ export default function ContactPage() {
                   Contact Number
                 </label>
                 <div className="mt-1 flex rounded-md shadow-sm">
-                  <span className="inline-flex items-center rounded-l-[41px] border border-r-0 border-gray-300 bg-gray-50 px-3 text-gray-500 sm:text-sm">
+                  <span className="inline-flex items-center rounded-l-[10px] border border-r-0 border-gray-300 bg-gray-50 px-3 text-gray-500 sm:text-sm">
                     +91
                   </span>
                   <input
                     {...register('contactNumber')}
                     type="tel"
-                    className="block w-full rounded-r-[41px] border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="block w-full rounded-r-[10px] border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     placeholder="Enter your Contact number"
                   />
                 </div>
@@ -162,7 +164,7 @@ export default function ContactPage() {
                 <textarea
                   {...register('message')}
                   rows={4}
-                  className="mt-1 block w-full rounded-[41px] border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-[10px] border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   placeholder="Enter your message"
                 />
                 {errors.message && (
@@ -175,10 +177,18 @@ export default function ContactPage() {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#0A0A3F] text-white py-2 px-4 rounded-md hover:bg-[#0A0A3F]/90 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className='flex justify-center items-center'
+                // className="w-full bg-[#0A0A3F] text-white py-2 px-4 rounded-md hover:bg-[#0A0A3F]/90 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {/* <ExploreButton>{isSubmitting ? 'Sending...' : 'Send Message'} </ExploreButton> */}
+                <div
+        className={cn(
+          "bg-[#0A0A3F] hover:bg-[#0A0A3F]/90 text-white rounded-full px-8 py-3 h-auto text-base font-medium",
+          
+        )}>
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </div>
+                {/* {isSubmitting ? 'Sending...' : 'Send Message'} */}
               </motion.button>
 
               {submitStatus === 'success' && (

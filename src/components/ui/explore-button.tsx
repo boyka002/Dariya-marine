@@ -21,7 +21,7 @@ export function ExploreButton({
     >
       <Button
         className={cn(
-          "bg-[#0A0A3F] hover:bg-[#0A0A3F]/90 text-white rounded-full px-8 py-2 h-auto text-base font-medium",
+          "bg-[#0A0A3F] hover:bg-[#0A0A3F]/90 text-white rounded-full px-8 py-3 h-auto text-base font-medium",
           className
         )}
         {...props}

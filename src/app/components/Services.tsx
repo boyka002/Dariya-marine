@@ -71,17 +71,22 @@ export default function Services() {
 
         <div className="space-y-20">
           {/* Building Services */}
+          <div className="space-y-6">
           {/* <div className="grid md:grid-cols-2 gap-8 items-center"> */}
+          <h3 className="text-4xl font-semibold text-[#0A0A3F] border-l-4 border-gray-600 pl-4">
+                Building
+              </h3>
            <div className="grid md:grid-cols-2 gap-8 items-center">
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="space-y-6 order-2 md:order-1"
+              className="space-y-6 self-start order-2 md:order-1"
             >
-              <h3 className="text-2xl font-semibold text-[#0A0A3F] border-l-4 border-blue-600 pl-4">
+              {/* <h3 className="text-2xl font-semibold text-[#0A0A3F] border-l-4 border-blue-600 pl-4">
                 Building
-              </h3>
+              </h3> */}
               <ul className="space-y-4 pl-6">
                 {buildingServices.map((service, index) => (
                   <motion.li
@@ -91,8 +96,8 @@ export default function Services() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex items-start"
                   >
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700">{service}</span>
+                    <span className="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700 text-2xl">{service}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -101,11 +106,11 @@ export default function Services() {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center space-x-2 text-[#0A0A3F] font-semibold hover:text-blue-600 transition-colors"
               >
-                <ServiceDetailsDialog
+                {/* <ServiceDetailsDialog
                   title="Building Services"
                   description="We specialize in constructing high-quality marine vessels tailored to your specific needs."
                   details={buildingDetails}
-                />
+                /> */}
                 {/* <ExploreButton>Read More</ExploreButton> */}
                 {/* <ChevronRight className="w-5 h-5" /> */}
               </motion.div>
@@ -124,9 +129,21 @@ export default function Services() {
               />
             </motion.div>
           </div> 
+          <div className='flex justify-center items-center'>
+          <ServiceDetailsDialog
+                  title="Building Services"
+                  description="We specialize in constructing high-quality marine vessels tailored to your specific needs."
+                  details={buildingDetails}
+                />
+                </div>
+          </div>
 
           {/* Repair Services */}
           {/* <div className="grid md:grid-cols-2 gap-8 items-center"> */}
+          <div className="space-y-6">
+          <h3 className="text-4xl font-semibold text-[#0A0A3F] border-l-4 border-gray-600 pl-4">
+                Repair
+              </h3>
           <div className="grid md:grid-cols-2 gap-8 items-center">
 
             <motion.div
@@ -146,11 +163,11 @@ export default function Services() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="space-y-6"
+              className="space-y-6 self-start"
             >
-              <h3 className="text-2xl font-semibold text-[#0A0A3F] border-l-4 border-blue-600 pl-4">
+              {/* <h3 className="text-2xl font-semibold text-[#0A0A3F] border-l-4 border-blue-600 pl-4">
                 Repair
-              </h3>
+              </h3> */}
               <ul className="space-y-4 pl-6">
                 {repairServices.map((service, index) => (
                   <motion.li
@@ -160,8 +177,8 @@ export default function Services() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex items-start"
                   >
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700">{service}</span>
+                    <span className="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700 text-2xl">{service}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -172,27 +189,36 @@ export default function Services() {
               >
                 {/* <span>Read More</span> */}
                 {/* <ExploreButton>Read More</ExploreButton> */}
-                <ServiceDetailsDialog
-                  title="Repair Services"
-                  description="Our expert team provides comprehensive repair and maintenance services for all types of marine vessels."
-                  details={repairDetails}
-                />
+
                 {/* <ChevronRight className="w-5 h-5" /> */}
               </motion.div>
             </motion.div>
           </div>
+          <div className='flex justify-center items-center'>
+          <ServiceDetailsDialog
+                  title="Repair Services"
+                  description="Our expert team provides comprehensive repair and maintenance services for all types of marine vessels."
+                  details={repairDetails}
+                />
+                </div>
+          </div>
           {/* Launching air bags */}
+          <div className="space-y-6">
+
+          <h3 className="text-4xl font-semibold text-[#0A0A3F] border-l-4 border-gray-600 pl-4">
+                Launching Air Bags
+              </h3>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="space-y-6 order-2 md:order-1"
+              className="space-y-6 self-start order-2 md:order-1"
             >
-              <h3 className="text-2xl font-semibold text-[#0A0A3F] border-l-4 border-blue-600 pl-4">
+              {/* <h3 className="text-2xl font-semibold text-[#0A0A3F] border-l-4 border-blue-600 pl-4">
                 Launching Air Bags
-              </h3>
-              <ul className="space-y-4 pl-6">
+              </h3> */}
+              <ul className="space-y-4 self-start">
                 {launchingServices.map((service, index) => (
                   <motion.li
                     key={index}
@@ -201,8 +227,8 @@ export default function Services() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex items-start"
                   >
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700">{service}</span>
+                    <span className="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700 text-2xl">{service}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -221,8 +247,13 @@ export default function Services() {
               />
             </motion.div>
           </div>
+          </div>
                     {/* Repair Services 2 */}
           {/* <div className="grid md:grid-cols-2 gap-8 items-center"> */}
+          <div className="space-y-6">
+          <h3 className="text-4xl font-semibold text-[#0A0A3F] border-l-4 border-gray-600 pl-4">
+                Repair
+              </h3>
           <div className="grid md:grid-cols-2 gap-8 items-center">
 
             <motion.div
@@ -242,11 +273,11 @@ export default function Services() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="space-y-6"
+              className="space-y-6 self-start"
             >
-              <h3 className="text-2xl font-semibold text-[#0A0A3F] border-l-4 border-blue-600 pl-4">
+              {/* <h3 className="text-2xl font-semibold text-[#0A0A3F] border-l-4 border-blue-600 pl-4">
                 Repair
-              </h3>
+              </h3> */}
               <ul className="space-y-4 pl-6">
                 {repair2Sercvices.map((service, index) => (
                   <motion.li
@@ -256,12 +287,13 @@ export default function Services() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex items-start"
                   >
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700">{service}</span>
+                    <span className="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700 text-2xl">{service}</span>
                   </motion.li>
                 ))}
               </ul>
             </motion.div>
+          </div>
           </div>
         </div>
       </div>
