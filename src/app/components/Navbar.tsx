@@ -20,13 +20,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="relative w-[522px] h-[219px]">
+          <div className="relative w-[522px] h-[219px] ">
             <Link href="/">
               <Image
                 src="/dhariyaLogo.svg"
                 alt="Dhariya Marine Engineering Services"
                 fill
-                className="object-contain"
+                className="object-contain -m-8 sm:m-0"
                 priority
               />
             </Link>
@@ -65,10 +65,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden -mt-8">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-navy-900"
+              className="p-2 text-[#828282] bg-[#0A014C] rounded-[7px]"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />

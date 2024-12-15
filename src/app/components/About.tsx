@@ -146,7 +146,7 @@ export default function About() {
             // style={{ border: '12px solid #0A014C' }}
           >
             <Image
-              src="/about-image-1.jpg"
+              src="/Aboutimg-new-1.png"
               alt="PB-2 vessel"
               fill
               className="object-cover"
@@ -162,15 +162,10 @@ export default function About() {
           className="max-w-3xl mx-auto text-center space-y-6"
         >
           <p className="text-lg leading-relaxed text-white">
-            We are pleased to introduce ourselves: Dhariya Marine Engineering Services to your organization as 
-            providers of Marine engineering services. DMES was established in 2016 in Kochi as a small marine 
-            workshop.
+          We are pleased to introduce Dhariya Marine Engineering Services to your organization as providers of marine engineering services. 
           </p>
           <p className="text-lg leading-relaxed text-white hidden sm:block">
-            Our boat yard is situated in Edakochi, Kochi has a facility for boat, barge building and repair. 
-            This facility having work approvals from Kerala Maritime Board, Govt of Kerala is capable of 
-            undertaking construction and repair of various types of vessels up to 55 Meter x 10 meters in size 
-            at present and are in the process of expanding the capacities further.
+          Our boatyard is situated in Kochi which has a facility for building and repair. This facility having work approvals from the Kerala Maritime Board, Govt. of Kerala, is capable of undertaking the construction and repair of various types of vessels up to 55 meters x 10 meters in size at present and is in the process of expanding the capacities further.
           </p>
         </motion.div>
       </div>

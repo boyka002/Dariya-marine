@@ -26,10 +26,17 @@ export default function Hero() {
   return (
     <div className="relative min-h-screen">
       {/* Background Image */}
-      <div 
+      {/* <div 
         className="absolute inset-0 bg-cover bg-center h-[120%]"
-        style={{ backgroundImage: "url('/HeroBanner.png')" }}
-      />
+        style={{ backgroundImage: "url('/HeroBannerNew.png')" }}
+      /> */}
+      <div 
+          className="absolute inset-0 bg-cover h-[120%]"
+          style={{ 
+            backgroundImage: "url('/HeroBannerNew.png')",
+            backgroundPosition: "56% center"  // Adjust this percentage to show more/less of the right side
+          }}
+        />
         {/* Semi-transparent Blur PNG behind the text */}
           <div
             className="absolute inset-0 z-1"
@@ -50,6 +57,7 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12"
             style={{
               textAlign: isMobile ? 'center' : 'left',
+              paddingTop: isMobile ? '4.5rem' : '8rem',
             }}>
         <div className="max-w-2xl relative top-[3rem]">
           {/* Semi-transparent background */}

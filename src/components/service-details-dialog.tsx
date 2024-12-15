@@ -15,7 +15,24 @@ export function ServiceDetailsDialog({ title, description, details }: ServiceDet
           {/* <Button variant="outline">Read More</Button> */}
           <ExploreButton>Read More</ExploreButton>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[600px] w-11/12 bg-white p-6">
+        <DialogContent className="sm:max-w-[600px] w-11/12 max-h-[700px] bg-white p-0 overflow-hidden">
+  <div className="p-6 border-b">
+    <DialogHeader>
+      <DialogTitle>{title}</DialogTitle>
+      <DialogDescription>{description}</DialogDescription>
+    </DialogHeader>
+  </div>
+  
+  <div className="p-6 overflow-y-auto max-h-[calc(700px-160px)]">
+    <h4 className="text-base font-semibold mb-3">Additional Details:</h4>
+    <ul className="list-disc pl-6 space-y-3">
+      {details.map((detail, index) => (
+        <li key={index} className="text-base">{detail}</li>
+      ))}
+    </ul>
+  </div>
+</DialogContent>
+        {/* <DialogContent className="sm:max-w-[600px] w-11/12 max-h-[700px] bg-white p-6 overflow-hidden">
           <DialogHeader>
             <DialogTitle>{title}</DialogTitle>
             <DialogDescription>{description}</DialogDescription>
@@ -28,7 +45,7 @@ export function ServiceDetailsDialog({ title, description, details }: ServiceDet
               ))}
             </ul>
           </div>
-        </DialogContent>
+        </DialogContent> */}
       </Dialog>
     )
   }
