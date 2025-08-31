@@ -3,23 +3,29 @@ import Link from "next/link"
 import { Facebook, Twitter, Instagram } from 'lucide-react'
 
 const navigation = {
+    //   { href: '#home', label: 'Home', active: true },
+    // { href: '#about-us', label: 'About Us' },
+    // { href: '#services', label: 'Services' },
+    // { href: '/malabar-40', label: 'Malabar 40' },
+    // { href: '#contact', label: 'Contact' }
   main: [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about-us' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'About Us', href: '#about-us' },
+    // { name: 'Gallery', href: '/gallery' },
+    { name: 'Services', href: '#services' },
+    { name: 'Malabar 40', href: '/malabar-40' },
+    { name: 'Contact', href: '#contact' },
   ],
   quickLinks: [
-    { name: 'Privacy Policy', href: '/privacy-policy' },
-    { name: 'Term Of Service', href: '/terms' },
-    { name: 'Disclaimer', href: '/disclaimer' },
-    { name: 'Credits', href: '/credits' },
-    { name: 'FAQs', href: '/faqs' },
+    { name: 'Privacy Policy', href: '/' },
+    { name: 'Term Of Service', href: '/' },
+    { name: 'Disclaimer', href: '/' },
+    { name: 'Credits', href: '/' },
+    { name: 'FAQs', href: '/' },
   ],
   services: [
     { name: 'Home', href: '/' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '#contact' },
   ],
   social: [
     {

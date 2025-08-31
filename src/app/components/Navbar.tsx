@@ -10,6 +10,7 @@ const navLinks = [
     { href: '#home', label: 'Home', active: true },
     { href: '#about-us', label: 'About Us' },
     { href: '#services', label: 'Services' },
+    { href: '/malabar-40', label: 'Malabar 40' },
     { href: '#contact', label: 'Contact' },
   ]
 export default function Navbar() {
